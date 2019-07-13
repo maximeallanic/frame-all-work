@@ -1,0 +1,76 @@
+{
+  "name": "frame-all-work",
+  "version": "0.0.1",
+  "description": "A Serverless framework",
+  "repository": "https://github.com/maximeallanic/frame-all-work.git",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "e2e": "repo-tools test deploy",
+    "test": "repo-tools test app",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "author": "Google Inc.",
+  "contributors": [
+    {
+      "name": "Jon Wayne Parrott",
+      "email": "jonwayne@google.com"
+    },
+    {
+      "name": "Jonathan Simon",
+      "email": "jbsimon@google.com"
+    },
+    {
+      "name": "Jason Dobry",
+      "email": "jdobry@google.com"
+    },
+    {
+      "name": "Ace Nassri",
+      "email": "anassri@google.com"
+    }
+  ],
+  "cloud-repo-tools": {
+    "requiresKeyFile": true,
+    "requiresProjectId": true,
+    "test": {
+      "app": {
+        "args": [
+          "app.js"
+        ],
+        "msg": "Hello, world!"
+      }
+    }
+  },
+  "license": "Apache-2.0",
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "btoa": "^1.2.1",
+    "chokidar": "^2.0.4",
+    "express": "4.16.2",
+    "get-function-arguments": "^1.0.0",
+    "glob": "^7.1.3",
+    "googleapis": "^35.0.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "nodemailer": "^4.6.8",
+    "q": "^1.5.1"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "2.2.1",
+    "ava": "0.25.0",
+    "supertest": "3.0.0"
+  },
+  "engines": {
+    "node": "8.x.x"
+  }
+}
