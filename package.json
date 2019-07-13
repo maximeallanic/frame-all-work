@@ -5,6 +5,7 @@
   "repository": "https://github.com/maximeallanic/frame-all-work.git",
   "private": true,
   "main": "app.js",
+  "bin": "app.js",
   "scripts": {
     "start": "node app.js",
     "e2e": "repo-tools test deploy",
